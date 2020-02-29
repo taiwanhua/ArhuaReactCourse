@@ -1,11 +1,11 @@
 module.exports = {
   title: '歡迎來到阿華的React課程',
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://taiwanhua.github.io/ArhuaReactCourse',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'taiwanhua', // Usually your GitHub org/user name.
-  projectName: 'fdtm', // Usually your repo name.
+  projectName: 'ArhuaReactCourse', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: '首頁',
