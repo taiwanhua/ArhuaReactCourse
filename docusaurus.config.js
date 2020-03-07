@@ -1,8 +1,8 @@
 module.exports = {
   title: '歡迎來到阿華的React課程',
   tagline: '',
-  url: 'https://taiwanhua.github.io/ArhuaReactCourse',
-  baseUrl: '/',
+  url: 'https://taiwanhua.github.io',
+  baseUrl: '/ArhuaReactCourse/',
   favicon: 'img/favicon.ico',
   organizationName: 'taiwanhua', // Usually your GitHub org/user name.
   projectName: 'ArhuaReactCourse', // Usually your repo name.

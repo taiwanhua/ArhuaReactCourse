@@ -553,4 +553,5 @@ const headerText = response.settings.headerText || 'Hello, world!';
 
 ```javascript
 const headerText = response.settings.headerText ?? 'Hello, world!';
+
 ```
