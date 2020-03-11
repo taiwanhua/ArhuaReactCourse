@@ -11,7 +11,7 @@ Fetch API提供了一個能獲取包含跨網路資料在的資料介面。它�
 
 而fetch() 函數裡第一個參數，就是要取得資料的網址。該方法會回傳一個 resolve 的 promise 回應。你也能選擇性地使用第二個物件參數來設置 request 參數。
 
-![前後端分離](/docs/assets/Fetch.png)
+![前後端分離](/ArhuaReactCourse/img/fetch.png)
 
 ## Fetch請求範例
 

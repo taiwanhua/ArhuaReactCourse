@@ -224,7 +224,7 @@ let {name: {says}} = {baz: 'baz'};//報錯
 
 需要注意一點，解構賦值是可以取得子屬性的:
 
-![打印結果](/docs/assets/img00001.jpg)
+![打印結果](/ArhuaReactCourse/img/img00001.jpg)
 
 ```javascript
 const obj1 = {};
