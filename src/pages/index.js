@@ -30,7 +30,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        課程內所有程式碼皆放在GitHub上，方便取得更不漏接任何程式碼。
+        課程內所有程式碼皆放在GitHub上，方便取得更不漏接任何程式碼；此外更有常用程式碼片段 (Snippets)，隨開即用。
       </>
     ),
   },

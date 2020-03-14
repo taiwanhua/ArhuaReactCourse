@@ -8,7 +8,8 @@
 module.exports = {
   someSidebar: {
     阿華的React課程: ['home', 'CreateProject'], /*'doc1', 'doc2', 'doc3'],*/
-    常用ES6語法與必備知識: ['ES6', 'Let&Const', 'module', 'Destructuring', 'NewFeatures', 'Class', 'Promise', 'Fetch', 'Asyncawait']
+    常用ES6語法與必備知識: ['ES6', 'Let&Const', 'module', 'Destructuring', 'NewFeatures', 'Class', 'Promise', 'Fetch', 'Asyncawait'],
+    '程式碼片段  (Snippets)': ['HowToUseSnippets','AsyncSnippets']
     /**Features: ['mdx'],**/
   },
 };

@@ -4,6 +4,12 @@ title: Promise (異步處理方案)
 sidebar_label: Promise (異步處理方案)
 ---
 
+## 異步
+
+所謂"異步"，簡單說就是一個任務不是連續完成的，可以理解成一個任務被分成兩段，先執行第一段，然後轉而執行其他任務，等做好了準備，再回過頭執行第二段。
+比如，有一個任務是讀取文件進行處理，任務的第一段是向操作系統發出請求，要求讀取文件。然後，程序執行其他任務，等到操作系統返回文件，再接著執行任務的第二段（處理文件）。這種不連續的執行，就叫做異步。
+相反地，連續的執行就叫做 **同步**。由於是連續執行，不能插入其他任務，所以操作系統從硬碟讀取文件的這段時間，程序只能等到讀取完畢才能繼續執行。
+
 ## Promise (異步處理方案)簡介
 
 所謂Promise，簡單說就是一個容器，裡面保存著某個未來才會結束的事件（通常是一個異步處理，如取得後端數據）的結果。
@@ -117,6 +123,10 @@ promise.then((result) => {
 	console.log(post); //輸出 : 123
 });
 ```
+<!-- 
+下圖將一個代碼區塊內有同步與異步(Promise + 多個then) 觸發的順序整理如圖 : 
+
+![Promise流程](/ArhuaReactCourse/img/async.png) -->
 
 ### Promise.prototype.catch()
 
@@ -260,3 +270,35 @@ promise
   }
 );
 ```
+
+### Promise.all()
+
+Promise.all()方法用於將多個Promise 實例，包裝成一個新的Promise 實例。
+
+Promise.all()方法接受一個數組作為參數，數組內都若不是Promise實例，就會被轉為Promise再處理；另外，Promise.all()方法的參數可以不是數組，但必須具有Iterator接口，且返回的每個成員都是Promise
+
+使用如 : 
+
+```javascript
+const p = Promise.all([p1, p2, p3]);
+```
+
+p的狀態由p1、p2、p3決定，分成兩種情況。
+
+> （1）只有p1、p2、p3的狀態都變成fulfilled，p的狀態才會變成fulfilled，此時p1、p2、p3的返回值組成一個數組，傳遞給p的回調函數。
+
+> （2）只要p1、p2、p3之中有一個被rejected，p的狀態就變成rejected，此時第一個被reject的實例的返回值，會傳遞給p的回調函數。
+
+<!-- 下面是一個具體的例子。
+
+// 生成一个Promise对象的数组
+const promises = [2, 3, 5, 7, 11, 13].map(function (id) {
+  return getJSON('/post/' + id + ".json");
+});
+
+Promise.all(promises).then(function (posts) {
+  // ...
+}).catch(function(reason){
+  // ...
+});
+上面代碼中，promises是包含6個Promise實例的數組，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all方法後面的回調函數。 -->
