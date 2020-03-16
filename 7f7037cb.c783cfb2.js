@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{113:function(a){a.exports=JSON.parse('{"allTagsPath":"/ArhuaReactCourse/blog/tags","slug":"docusaurus","name":"docusaurus","count":3,"permalink":"/ArhuaReactCourse/blog/tags/docusaurus"}')}}]);
