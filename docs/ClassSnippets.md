@@ -8,7 +8,7 @@ sidebar_label: Class(類) 程式碼片段 (Snippets)
 
 ```json
 "Class (類)": {
-	"prefix": "$#NewClass0001",
+	"prefix": "$Class0001",
 	"body": [
 		"//Class (類)",
 		"//1.Class的數據類型是函數，Class本身就指向構造函數",
@@ -76,7 +76,7 @@ sidebar_label: Class(類) 程式碼片段 (Snippets)
 
 ```json
 "Class(類)繼承 (extends)": {
-	"prefix": "$NewClassExtends0001",
+	"prefix": "$ClassExtends0001",
 	"body": [
 		"//Class(類)繼承 (extends)",
 		"//1.子類必須在constructor函數中調用super函數，否則new的時候會報錯",

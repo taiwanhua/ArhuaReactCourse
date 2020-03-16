@@ -302,3 +302,5 @@ Promise.all(promises).then(function (posts) {
   // ...
 });
 上面代碼中，promises是包含6個Promise實例的數組，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all方法後面的回調函數。 -->
+
+ ## [Promise 異步處理方案 (Snippets)連結](./PromiseSnippets)
