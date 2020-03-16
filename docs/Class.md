@@ -21,12 +21,12 @@ Point.prototype.toString = function () {
   return '(' + this.x + ', ' + this.y + ')';
 };
 
-var p = new Point(1, 2);
+var p = new Point(1, 2);//特別注意，new了之後Point內this指向前實例物件而不是windos
 
 console.log(p.toString())//輸出 : (1, 2)
 
-console.log(typeof Point) //輸出 : "function"
-console.log(Point === Point.prototype.constructor) //輸出 : true
+console.log(typeof Point) //輸出 : "function"，表示Class就是函數
+console.log(Point === Point.prototype.constructor) //輸出 : true，表示Class本身就指向構造函數
 ```
 
 等同
@@ -205,3 +205,5 @@ B.hello()  //輸出 :  hello world
 ```
 
 上面代碼中，hello()是A類的靜態函數，B繼承A，也繼承了A的靜態函數。
+
+ ## [Class(類) 程式碼片段 (Snippets)連結](./ClassSnippets)

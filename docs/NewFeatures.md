@@ -1,6 +1,6 @@
 ---
 id: NewFeatures
-title: 擴充功能
+title: 擴充功能(New Features)
 sidebar_label: 擴充功能(New Features)
 ---
 
@@ -188,7 +188,7 @@ console.log([...'hello']); 輸出 : // [ "h", "e", "l", "l", "o" ]
 ### find()、findIndex()
 
 find()、findIndex()函數非常類似，可接受三個參數，依次為當前的值、當前的位置和原陣列；
-前者返回第一個符合條件的陣列成員的值，，如果所有成員都不符合條件，則返回 undefined。
+前者返回第一個符合條件的陣列成員的值，如果所有成員都不符合條件，則返回 undefined。
 ；後者返回第一個符合條件的陣列成員的位置，如果所有成員都不符合條件，則返回 -1。
 
 ```javascript
@@ -437,7 +437,7 @@ console.log(proto.thisis()); // 輸出 : hello
 ```
 
 ES6新增了super，它是指向"物件的函數所在的當前物件"的原型物件 ( __proto__ )。
-注意 : super只能用在"物件的函數"之中，用在其他地方都會報錯。另外目前，只有物件方法的簡寫法可以讓JavaScript引擎確認，定義的是物件的方法。
+注意 : super只能用在"物件的函數"之中，用在其他地方都會報錯。另外目前，只有物件函數的簡寫法可以讓JavaScript引擎確認，定義的是物件的函數。
 換句話說，如下裡那種find()簡寫寫法，才可以使用super
 
 ```javascript
@@ -473,7 +473,7 @@ const obj = {
   }
 }
 
-Object.setPrototypeOf(obj, proto);
+Object.setPrototypeOf(obj, proto);//將 proto加入至obj的原型物件(obj.__proto__)中，此時在obj中proto為其原型物件
 
 obj.foo() //輸出 : "world"
 ```
@@ -533,7 +533,7 @@ const firstName = message?.body?.user?.firstName || 'default';
 ```
 
 鏈判斷運算符 "?." 會檢查左側的物件是否為null或undefined。<br/>
-如果是的，就返回undefined。而
+如果是的，就返回undefined，否則接續運算右側的物件。而
 "?."共有三種寫法
 
 - 物件?.Key // 若物件不為null或undefined，則返回 物件.Key的Value
@@ -555,3 +555,5 @@ const headerText = response.settings.headerText || 'Hello, world!';
 const headerText = response.settings.headerText ?? 'Hello, world!';
 
 ```
+
+ ## [擴充功能程式碼片段 (Snippets)連結](./NewFeaturesSnippets)

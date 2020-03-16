@@ -366,3 +366,5 @@ move(); // 回傳 : [0, 0]
 ```
 
 <!-- ### 應用場景大解析 -->
+
+ ## [解構賦值程式碼片段 (Snippets)連結](./DestructuringSnippets)

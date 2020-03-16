@@ -4,35 +4,40 @@ title: Async 函數程式碼片段 (Snippets)
 sidebar_label: Async 函數程式碼片段 (Snippets)
 ---
 
+> 重新製作
+
 ## Fetch Params處理 (備用)
 
+> 注意 ! 複製此程式碼片段時，請將下面 "取代這裡" 取代成兩個反斜線 "\\\"
+
 ```json
-"Async004": {
-		"prefix": "$Async004",
-		"body": [
-			"let Params = Params_ ?? {};",
-			"if (Params?.Params) {",
-			"    let method = Params?.method || \"GET\";",
-			"    switch (method) {",
-			"        case \"GET\":",
-			"            let count = 0;",
-			"            for (let [key, value] of Object.entries(Params.Params)) {",
-			"                Urls_ = (count == 0) ? `${Urls_}?${key}=${value}` : `${Urls_}&${key}=${value}`",
-			"                count++;",
-			"            }",
-			"            break;",
-			"        default:",
-			"            let ParamForm = new FormData();",
-			"            for (let [key, value] of Object.entries(Params.Params)) {",
-			"                ParamForm.append(`${Urls_}?${key}=${value}`, `${Urls_}&${key}=${value}`);",
-			"            }",
-			"            Params[\"body\"] = ParamForm;",
-			"            break;",
-			"    }",
-			"}"
-		],
-		"description": "Fetch Params處理 (備用)"
-	}
+"Fetch Params處理 (備用)": {
+	"prefix": "$Async004",
+	"body": [
+		"//Fetch Params處理",
+		"//let ${2:fetch第二個參數名} = ${1:外部函數參數名} ?? {};//外部函數若未設置預設值為 {}，則需要此行",
+		"if (${2:fetch第二個參數名}?.Params) {",
+		"    let method = ${2:fetch第二個參數名}?.method || \"GET\";",
+		"    switch (method) {",
+		"        case \"GET\":",
+		"            let count = 0;",
+		"            for (let [key, value] of Object.entries(${2:fetch第二個參數名}.Params)) {",
+		"                Urls_ = (count == 0) ? `取代這裡${Urls_}?取代這裡${key}=取代這裡${value}` : `取代這裡${Urls_}&取代這裡${key}=取代這裡${value}`",
+		"                count++;",
+		"            }",
+		"            break;",
+		"        default:",
+		"            let ParamForm = new FormData();",
+		"            for (let [key, value] of Object.entries(${2:fetch第二個參數名}.Params)) {",
+		"                ParamForm.append(`取代這裡${Urls_}?取代這裡${key}=取代這裡${value}`, `取代這裡${Urls_}&取代這裡${key}=取代這裡${value}`);",
+		"            }",
+		"            ${2:fetch第二個參數名}[\"body\"] = ParamForm;",
+		"            break;",
+		"    }",
+		"}"
+	],
+	"description": "Fetch Params處理 (備用)"
+}
 ```
 
 ## 單發Fetch、多個await

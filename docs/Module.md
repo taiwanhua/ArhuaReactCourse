@@ -166,3 +166,5 @@ export { foo, bar };
 |                     | 引入重新命名 (as)                             | import { lastName as surname } from './export.js';                 |
 |                     | 全部引入並重新命名                            | `import * as all from './export.js' ;`<br/><br/>function setName(element) {<br/>  let GetFromExport = all.firstName + all.year + all.lastName;<br/>} |
 |                     | 引入默認導出模組                              | `import customName from './export.js' ;` |
+
+## [module 程式碼片段 (Snippets)](./ModuleSnippets)

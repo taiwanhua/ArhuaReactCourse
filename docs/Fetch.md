@@ -48,3 +48,5 @@ fetch('https://my-json-server.typicode.com/taiwanhua/demo/posts', {
   .then(json => console.log(json)) // 返回 {title: "新增標題", body: "新增內文", userId: 1, id: 4}
 
 ```
+
+ ## [Fetch 程式碼片段 (Snippets)連結](./FetchSnippets)
