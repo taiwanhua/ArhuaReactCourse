@@ -18,7 +18,7 @@ let number = 100;
 const number = 100;
 ```
 
-> 注意：常量是不可變的，也就是常量定義之後不能更改它，否則會報錯。(詳見下面Const解說)
+> 注意：常數是不可變的，也就是常數定義之後不能更改它，否則會報錯。(詳見下面Const解說)
 
 > 建議：盡量使用const，除非值可變（值可變時使用let），var應以let或const替代。
 
@@ -38,7 +38,7 @@ if(true) {//在代碼區塊內以 let、var 分別宣告變數
   var b = 1;
 //代碼區塊結束
     if(true) {
-        console.log(a); // 1
+        console.log(a); // 10
         console.log(b); // 1
     }
 }
