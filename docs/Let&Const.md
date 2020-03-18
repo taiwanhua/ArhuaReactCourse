@@ -224,7 +224,7 @@ PI = 3;// 再賦值就會報錯TypeError: Assignment to constant variable.
 if (true) {
   const num = 5;
 }
-console.log(num) // 報錯，因MAX只在定義所在的塊級作用域有效 Uncaught ReferenceError: MAX is not defined
+console.log(num) // 報錯，因num只在定義所在的塊級作用域有效 Uncaught ReferenceError: num is not defined
 ```
 
 ### 4. const宣告變數也不存在變數提升，亦存在暫時性死區，只能在宣告後使用變數
