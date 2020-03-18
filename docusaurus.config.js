@@ -17,12 +17,12 @@ module.exports = {
         {to: 'docs/home', label: '課程說明文件', position: 'left'},
         //{to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/taiwanhua/fdtm',
+          href: 'https://github.com/taiwanhua/Code_ArhuaReactCourse',
           label: '課程專案程式碼',
           position: 'left',
         },
         {
-          href: 'https://github.com/taiwanhua/fdtm/issues',
+          href: 'https://github.com/taiwanhua/-discuss_ArhuaReactCourse/issues',
           label: 'GitHub問題討論區',
           position: 'left',
         },
