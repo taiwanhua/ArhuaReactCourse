@@ -16743,7 +16743,7 @@ export default Function2;
 // import.js
 import customName from './export';//加載該模組時，import命令可以為該匿名函數指定任意名字，不需要知道原模組輸出的名字。
 //customName即export.js中的Function2
-`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"export-與import-的複合寫法"},`export 與import 的複合寫法`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`如果在一個模組之中，先輸入後輸出同一個模組，import語句可以與export語句寫在一起。
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"export-與import-的複合寫法"},`export 與import 的複合寫法`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`如果在一個模組之中，先引入後導出同一個模組，import語句可以與export語句寫在一起。
 但需要注意的是，寫成一行以後，foo和bar實際上並沒有被導入當前模組，
 只是相當於轉發了這兩個變數，導致當前模組不能直接使用foo和bar。`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(C_Users_Arhua_Desktop_Course_Docs_ReactCourseNotePage_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-js"}),`//this.js
 export { foo, bar } from './other';
