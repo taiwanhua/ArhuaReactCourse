@@ -141,7 +141,7 @@ import customName from './export';//加載該模組時，import命令可以為�
 
 ### export 與import 的複合寫法
 
-如果在一個模組之中，先輸入後輸出同一個模組，import語句可以與export語句寫在一起。
+如果在一個模組之中，先引入後導出同一個模組，import語句可以與export語句寫在一起。
 但需要注意的是，寫成一行以後，foo和bar實際上並沒有被導入當前模組，
 只是相當於轉發了這兩個變數，導致當前模組不能直接使用foo和bar。
 
