@@ -287,14 +287,14 @@ console.log(`foo ${fn()} bar`);// foo Hello World bar
 模板字串可以接在一個函數的後面，該函數將以此模板字串作為參數調用。
 
 ```javascript
- function logArgs(...args){ console.log(...args)}
+ const logArgs = (...args) => { console.log(...args)}
 // 比較以下兩種不同點，緊接在函數後面logArgs`Hello....的模板字串，會被解析成陣列
 
 //例1 :
-logArgs`Hello ${'模板1'} world ${'模板2'}`//輸出 : ["Hello ", " world ", ""] "模板1" "模板2"
+logArgs`Hello ${'模板1'} world ${'模板2'} `//輸出 : ["Hello ", " world ", ""] "模板1" "模板2"
 
 //例2 :
-logArgs(`Hello ${'模板1'} world ${'模板2'}`)//輸出 : Hello 模板1 world 模板2
+logArgs(`Hello ${'模板1'} world ${'模板2'} `)//輸出 : Hello 模板1 world 模板2
 
 //也就是說 例1 是以 logArgs(["Hello ", " world ", ""],"模板1","模板2")的形式調用
 ```
@@ -482,7 +482,7 @@ obj.foo() //輸出 : "world"
 
 (1) 搭配解構賦值使用
 
-物件的解構賦值用於從另一個物件取值，相當於將另一個物件的所有成員，分配到指定的物件上面。如下x、y字等號右方解構，而z將其它所有成員拷貝過來，此拷貝是為淺拷貝。
+物件的解構賦值用於從另一個物件取值，相當於將另一個物件的所有成員，分配到指定的物件上面。如下x、y自等號右方解構，而z將其它所有成員拷貝過來，此拷貝是為淺拷貝。
 
 注意! 搭配解構賦值使用擴展運算符...必須在最後一個位置，如 { x, y, ...z }
 <!-- ...沒有復制它的原型物件的屬性。 -->
