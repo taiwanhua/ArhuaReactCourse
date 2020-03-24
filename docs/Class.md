@@ -25,8 +25,8 @@ var p = new Point(1, 2);//特別注意，new了之後Point內this指向前實例
 
 console.log(p.toString())//輸出 : (1, 2)
 
-console.log(typeof Point) //輸出 : "function"，表示Class就是函數
-console.log(Point === Point.prototype.constructor) //輸出 : true，表示Class本身就指向構造函數
+console.log(typeof Point) //輸出 : "function"
+console.log(Point === Point.prototype.constructor) //輸出 : true
 ```
 
 等同
@@ -60,7 +60,7 @@ console.log(Point === Point.prototype.constructor) //輸出 : true
 
 上面Class寫法定義了一個"Class"，可以看到裡面有一個constructor函數，它是Class的構造函數，當使用new生成實例物件時，constructor函數會自動調用，而this則指向當前實例物件。所以完全可以看作是另一種寫法。
 
-注意，上面Point Class除了構造函數(constructor)，還定義了一個toString函數。定義Class的函數的時候，前面不需要加上function這個關鍵字，直接把函數宣告放進去了就可以了。另外，函數之間不需要逗號分隔，加了會報錯。
+注意，定義Class的函數的時候，前面不需要加上function這個關鍵字，直接把函數宣告放進去了就可以了。另外，上面Point Class除了構造函數(constructor)，還定義了一個toString函數。而函數之間不需要逗號分隔，加了會報錯。
 
 ## 取值函數（getter）和存值函數（setter）
 
@@ -166,6 +166,8 @@ class ColorPoint extends Point {//該ColorPoint類通過 "extends"，繼承了Po
     return this.color + ' ' + super.toString(); // 調用父類的toString()
   }
 }
+
+let CP = new ColorPoint(1, 2, 3);
 ```
 
 上面constructor函數和toString函數之中，都出現了"super"，它在這裡表示父類的構造函數，用來新建父類的this物件。
@@ -187,6 +189,8 @@ class ColorPoint extends Point {
     this.color = color; // 正確
   }
 }
+
+let CP = new ColorPoint(1, 2, 3);
 ```
 
 最後，父類的靜態函數，也會被子類繼承。
@@ -204,6 +208,6 @@ class B extends A {
 B.hello()  //輸出 :  hello world
 ```
 
-上面代碼中，hello()是A類的靜態函數，B繼承A，也繼承了A的靜態函數。
+上面程式碼中，hello()是A類的靜態函數，B繼承A，也繼承了A的靜態函數。
 
  ## [Class(類) 程式碼片段 (Snippets)連結](./ClassSnippets)
