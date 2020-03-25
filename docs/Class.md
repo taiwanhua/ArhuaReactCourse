@@ -21,7 +21,7 @@ Point.prototype.toString = function () {
   return '(' + this.x + ', ' + this.y + ')';
 };
 
-var p = new Point(1, 2);//特別注意，new了之後Point內this指向實例物件而不是windos
+var p = new Point(1, 2);//特別注意，new了之後Point內this指向實例物件而不是windows
 
 console.log(p.toString())//輸出 : (1, 2)
 
