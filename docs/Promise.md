@@ -246,9 +246,9 @@ promise
 .finally(() => {···});
 ```
 
-上面例子中，不管promise最後的狀態，在執行完then或catch指定的回調函數以後，都會執行finally方法指定的回調函數。
+上面例子中，不管promise最後的狀態，在執行完then或catch指定的回調函數以後，都會執行finally函數指定的回調函數。
 
-另外，finally本質上是then方法的特例。如下面例子，若不使用finally方法，同樣的語句需要為成功和失敗兩種情況各寫一次。有了finally方法，則只需要寫一次。
+另外，finally本質上是then函數的特例。如下面例子，若不使用finally函數，同樣的語句需要為成功和失敗兩種情況各寫一次。有了finally函數，則只需要寫一次。
 
 ```javascript
 promise
@@ -273,9 +273,9 @@ promise
 
 ### Promise.all()
 
-Promise.all()方法用於將多個Promise 實例，包裝成一個新的Promise 實例。
+Promise.all()函數用於將多個Promise 實例，包裝成一個新的Promise 實例。
 
-Promise.all()方法接受一個數組作為參數，數組內都若不是Promise實例，就會被轉為Promise再處理；另外，Promise.all()方法的參數可以不是數組，但必須具有Iterator接口，且返回的每個成員都是Promise
+Promise.all()函數接受一個數組作為參數，數組內若不是Promise實例，就會被轉為Promise再處理；另外，Promise.all()函數的參數可以不是數組，但必須具有Iterator接口，且返回的每個成員都是Promise
 
 使用如 : 
 
@@ -301,6 +301,6 @@ Promise.all(promises).then(function (posts) {
 }).catch(function(reason){
   // ...
 });
-上面代碼中，promises是包含6個Promise實例的數組，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all方法後面的回調函數。 -->
+上面代碼中，promises是包含6個Promise實例的數組，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all函數後面的回調函數。 -->
 
  ## [Promise 異步處理方案 (Snippets)連結](./PromiseSnippets)
