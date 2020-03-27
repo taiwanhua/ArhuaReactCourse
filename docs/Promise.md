@@ -214,7 +214,7 @@ promise
   });
   ```
 
-下面例子中，someAsyncThing函數產生的Promise物件，內部有語法錯誤。瀏覽器運行到這一行，會打印出錯誤提示ReferenceError: x is not defined，但是不會退出進程、終止腳本執行，2秒之後還是會輸出123。這就是說，Promise內部的錯誤不會影響到Promise外部的代碼，通俗的說法就是 "Promise會吃掉錯誤" 。
+下面例子中，someAsyncThing函數產生的Promise物件，內部有語法錯誤。瀏覽器運行到這一行，會打印出錯誤提示ReferenceError: x is not defined，但是不會退出進程、終止腳本執行，2秒之後還是會輸出123。這就是說，Promise內部的錯誤不會影響到Promise外部的程式碼，通俗的說法就是 "Promise會吃掉錯誤" 。
 
 ```javascript
 const someAsyncThing = () => {
@@ -275,7 +275,7 @@ promise
 
 Promise.all()函數用於將多個Promise 實例，包裝成一個新的Promise 實例。
 
-Promise.all()函數接受一個數組作為參數，數組內若不是Promise實例，就會被轉為Promise再處理；另外，Promise.all()函數的參數可以不是數組，但必須具有Iterator接口，且返回的每個成員都是Promise
+Promise.all()函數接受一個陣列作為參數，陣列內若不是Promise實例，就會被轉為Promise再處理；另外，Promise.all()函數的參數可以不是陣列，但必須具有Iterator接口，且返回的每個成員都是Promise
 
 使用如 : 
 
@@ -285,7 +285,7 @@ const p = Promise.all([p1, p2, p3]);
 
 p的狀態由p1、p2、p3決定，分成兩種情況。
 
-> （1）只有p1、p2、p3的狀態都變成fulfilled，p的狀態才會變成fulfilled，此時p1、p2、p3的返回值組成一個數組，傳遞給p的回調函數。
+> （1）只有p1、p2、p3的狀態都變成fulfilled，p的狀態才會變成fulfilled，此時p1、p2、p3的返回值組成一個陣列，傳遞給p的回調函數。
 
 > （2）只要p1、p2、p3之中有一個被rejected，p的狀態就變成rejected，此時第一個被reject的實例的返回值，會傳遞給p的回調函數。
 
@@ -301,6 +301,6 @@ Promise.all(promises).then(function (posts) {
 }).catch(function(reason){
   // ...
 });
-上面代碼中，promises是包含6個Promise實例的數組，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all函數後面的回調函數。 -->
+上面代碼中，promises是包含6個Promise實例的陣列，只有這6個實例的狀態都變成fulfilled，或者其中有一個變為rejected，才會調用Promise.all函數後面的回調函數。 -->
 
  ## [Promise 異步處理方案 (Snippets)連結](./PromiseSnippets)
