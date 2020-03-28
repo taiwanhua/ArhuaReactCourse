@@ -120,7 +120,7 @@ async function getTitle(url) {
   let html = await response.text();
   return html.match(/<title>([\s\S]+)<\/title>/i)[1];
 }
-getTitle('https://tc39.es/ecma262/').then(console.log)
+getTitle('https://my-json-server.typicode.com/taiwanhua/demo/getTitle').then(console.log)
 // 輸出 : "ECMAScript® 2020 Language&nbsp;Specification"
 ```
 
