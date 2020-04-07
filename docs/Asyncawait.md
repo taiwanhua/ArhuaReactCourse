@@ -11,7 +11,7 @@ ES2017 標準引入了async 函數，有了async 函數後使得異步操作變�
 首先，async 函數內通常搭配 await 命令一起使用，async 函數內的語句，若沒有加上 await 命令就會以異步的方式執行所有語句；
 若加上了await 命令就會等到這個await 命令後面的語句執行完後，再接著執行後面的語句。
 
-> await命令後面，只能是Promise物件和原始類型的值（數值、字符串和布爾值，但這時會自動轉成立即resolved的Promise物件）。
+> await命令後面，只能是Promise物件和原始類型的值（數值、字串和布林值，但這時會自動轉成立即resolved的Promise物件）。
 
 ```javascript
 
@@ -110,7 +110,7 @@ f().then(v => console.log(`成功 ${v}`))//f() 返回一個Promise，所以可�
 //輸出 : 成功 hello world
 ```
 
-(3) async函數返回的Promise物件，會在內部所有await命令後面的Promise物件執行完，才會發生狀態改變，除非遇到return語句或者拋出錯誤。也就是說，只有async函數內部的異步操作執行完，才會執行then方法指定的回調函數。
+(3) async函數返回的Promise物件，會在內部所有await命令後面的Promise物件執行完，才會發生狀態改變，除非遇到return語句或者拋出錯誤。也就是說，只有async函數內部的異步操作執行完，才會執行then函數指定的回調函數。
 
 下面是一個例子，函數getTitle內部有三個操作：抓取網頁、取出文本、匹配頁面標題。只有這三個操作全部完成，才會執行then方法裡面的console.log。
 
@@ -124,7 +124,7 @@ getTitle('https://my-json-server.typicode.com/taiwanhua/demo/getTitle').then(con
 // 輸出 : "ECMAScript® 2020 Language&nbsp;Specification"
 ```
 
-(4) async函數內部拋出錯誤，會導致Promise物件狀態發生改變其返回的Promise物件變為reject狀態。拋出的錯誤物件會被catch方法回調函數捕獲。
+(4) async函數內部拋出錯誤，會導致Promise物件狀態發生改變，讓其返回的Promise物件變為reject狀態。而拋出的錯誤物件會被catch方法回調函數捕獲。
 
 ```javascript
 async function f() {
