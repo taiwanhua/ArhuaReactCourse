@@ -91,5 +91,5 @@ sidebar_label: Class(類) 程式碼片段 (Snippets)
 		"}"
 	],
 	"description": "Class(類)繼承 (extends)"
-},
+}
 ```

@@ -137,6 +137,9 @@ MyComponent.propTypes = {
   想檢查的props名稱: PropTypes.func.isRequired,
 
   // 檢查某任意類型的props是否傳入，( isRequired設定其為必傳 )
-  想檢查的props名稱: PropTypes.any.isRequired,
+  想檢查的props名稱: PropTypes.any.isRequired
+}
 
 ```
+
+ ## [PropTypes 程式碼片段 (Snippets)連結](./PropTypesSnippets)
