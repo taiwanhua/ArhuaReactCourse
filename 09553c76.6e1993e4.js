@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{93:function(a){a.exports=JSON.parse('{"allTagsPath":"/ArhuaReactCourse/blog/tags","slug":"facebook","name":"facebook","count":1,"permalink":"/ArhuaReactCourse/blog/tags/facebook"}')}}]);
