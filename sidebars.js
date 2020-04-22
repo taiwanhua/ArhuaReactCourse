@@ -11,6 +11,7 @@ module.exports = {
     常用ES6語法與必備知識: ['ES6', 'Let&Const', 'module', 'Destructuring', 'NewFeatures', 'Class', 'Promise', 'Fetch', 'Asyncawait'],
     React組件基礎: ['ReactBuildUI', 'ReactComponentType', 'JSX', 'ReactBasicCSS', 'ReactUseEvents'],
     React組件傳遞資料: ['Hooks', 'FatherToSon', 'State', 'SonToFather', 'AcrossComponent'],
+    React生命週期: ['Lifecycle', 'useEffect'],
     '程式碼片段  (Snippets)': ['HowToUseSnippets', 'ModuleSnippets', 'DestructuringSnippets', 'NewFeaturesSnippets', 'ClassSnippets', 'PromiseSnippets', 'FetchSnippets', 'AsyncSnippets', 'ReactComponentSnippets', 'PropTypesSnippets', 'HooksSnippets', 'OtherSnippets'],
     '參考資料與更多資源連結': ['OtherSource']
     /**Features: ['mdx'],**/

@@ -45,3 +45,29 @@ sidebar_label: React Hooks 程式碼片段 (Snippets)
 	"description": "創建Context"
 }
 ```
+
+### 使用useEffect
+
+```json
+"使用useEffect": {
+	"prefix": "$useEffect0001",
+	"body": [
+		"useEffect(() => {",
+		"  //EffectCallback，可處理副作用",
+		"  ${1:副作用...}",
+		"",
+		"  return () => {",
+		"    // cleanup function，下一次執行EffectCallback前或卸載時執行，可做清理工作",
+		"    ${2:清理工作...}",
+		"  }",
+		"  ",
+		"  //(1) 不傳DependencyList : 組件更新時都執行EffectCallback",
+		"  //(2) DependencyList為空陣列 : 僅執行一次EffectCallback",
+		"  //(3) DependencyList為非空陣列 : DependencyList若改變會執行EffectCallback，",
+		"  ",
+		"}, [${3:DependencyList}])"
+	],
+	"description": "使用useEffect"
+}
+
+```

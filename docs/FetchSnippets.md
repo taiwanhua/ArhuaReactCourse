@@ -47,7 +47,7 @@ sidebar_label: Fetch 程式碼片段 (Snippets)
 		"//單純的fetch",
 		"fetch(${1:Urls_}, ${2:Params_ (接續使用fetchSecondParam001)})",
 		"    .then(Result => {",
-		"        ResultJson = Result.clone().json();//Respone.clone()",
+		"        const ResultJson = Result.clone().json();//Respone.clone()",
 		"        //做一些事情",
 		"        console.log(ResultJson)",
 		"        return ResultJson;",
