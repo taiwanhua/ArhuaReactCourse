@@ -45,7 +45,7 @@ sidebar_label: Async 函數程式碼片段 (Snippets)
 	"prefix": "$async003",
 	"body": [
 		"//單發Fetch、多個await        ",
-		"const AsyncFunctionName = async (${1:fetch第一個參數名 url}, ${2:fetch第二個參數名 url} = {}) => {",
+		"const ${1:AsyncFunctionName} = async (${2:fetch第一個參數名 url}, ${3:fetch第二個參數名 url} = {}) => {",
 		"    try {",
 		"        // await new Promise((resolve, reject) => {",
 		"        //     try {",
@@ -55,7 +55,7 @@ sidebar_label: Async 函數程式碼片段 (Snippets)
 		"        //         reject(Error);",
 		"        //     }",
 		"        // });",
-		"        const Response = await fetch(${1:fetch第一個參數名 url}, ${2:fetch第二個參數名 url})",
+		"        const Response = await fetch(${2:fetch第一個參數名 url}, ${3:fetch第二個參數名 url})",
 		"            .then(Result => {",
 		"                const ResultJson = Result.clone().json();//Respone.clone()",
 		"                //做一些事情",
