@@ -9,8 +9,8 @@ sidebar_label: Menu
 <!-- 多加一個this比較表 -->
 - # [React組件基礎](./ReactBuildUI)
 - # [React組件傳遞資料](./Hooks)
-- # [React生命週期]()
-- # [React Hooks再進化]()
+- # [React生命週期](./Lifecycle)
+- # [React Hooks再進化](./useRef)
 - # [其它的 Hooks]()
 - # [第三方套件]()
 - # [實戰演練]()

@@ -46,7 +46,7 @@ sidebar_label: React Hooks 程式碼片段 (Snippets)
 }
 ```
 
-### 使用useEffect
+## 使用useEffect
 
 ```json
 "使用useEffect": {
@@ -71,3 +71,19 @@ sidebar_label: React Hooks 程式碼片段 (Snippets)
 }
 
 ```
+
+## 使用useRef
+
+```json
+"使用useRef": {
+	"prefix": "$useRef0001",
+	"body": [
+		"const ${1:ref名} = useRef(${2:初始值});"
+	],
+	"description": "使用useRef"
+}
+
+```
+
+
+

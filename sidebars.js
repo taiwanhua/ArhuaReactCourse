@@ -12,6 +12,7 @@ module.exports = {
     React組件基礎: ['ReactBuildUI', 'ReactComponentType', 'JSX', 'ReactBasicCSS', 'ReactUseEvents'],
     React組件傳遞資料: ['Hooks', 'FatherToSon', 'State', 'SonToFather', 'AcrossComponent'],
     React生命週期: ['Lifecycle', 'useEffect'],
+    'React Hooks再進化':['useRef','selfDefineHook','useReducer'],
     '程式碼片段  (Snippets)': ['HowToUseSnippets', 'ModuleSnippets', 'DestructuringSnippets', 'NewFeaturesSnippets', 'ClassSnippets', 'PromiseSnippets', 'FetchSnippets', 'AsyncSnippets', 'ReactComponentSnippets', 'PropTypesSnippets', 'HooksSnippets', 'OtherSnippets'],
     '參考資料與更多資源連結': ['OtherSource']
     /**Features: ['mdx'],**/
