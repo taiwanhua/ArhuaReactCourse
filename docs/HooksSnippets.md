@@ -85,5 +85,61 @@ sidebar_label: React Hooks 程式碼片段 (Snippets)
 
 ```
 
+## 使用useReducer
 
+```json
+"使用useReducer": {
+	"prefix": "$useReducer0001",
+	"body": [
+		"const [${1:state名}, ${2:dispatch函數名}] = useReducer(${3:reducer函數名}, ${4:initialState(狀態初始值)}, ${5:init函數名});",
+		"// 1. 請接續在組件外設定reducer函數 (組件重新更新、渲染時才不會重複宣告或使用函數)",
+		"// 2. 可透過dispatch函數傳入action物件並調用reducer函數更新state",
+		"// 3. 若設置init函數，其可以接受initialState作為參數使用，",
+		"//    並且其返回值會覆蓋initialState成為狀態初始值"
+	],
+	"description": "使用useReducer"
+}
+```
 
+### reducer函數
+
+```json
+"reducer函數": {
+	"prefix": "$reducer0001",
+	"body": [
+		"const ${1:reducer函數名} = (state, action) => {",
+		"    //1. 參數state為上一個狀態",
+		"    //2. 參數action為自dispatch函數傳入的action物件",
+		"    //3. 下方透過action.type做對應的處理，",
+		"    //   讓其 return 的返回值成為下一個狀態 State",
+		"    ",
+		"    switch (action.type) {",
+		"        case \"${2:情況1}\":",
+		"            return ${3:下一個狀態1};",
+		"        case \"${4:情況2}\":",
+		"            return ${5:下一個狀態2};",
+		"        case \"${6:情況3}\":",
+		"            return ${7:下一個狀態3};",
+		"        default:",
+		"            return ${8:下一個狀態4};",
+		"    }",
+		"}"
+	],
+	"description": "reducer函數"
+},
+```
+
+### action物件
+
+```json
+"action物件": {
+	"prefix": "$action0001",
+	"body": [
+		"{ type: \"${1:哪種情況}\", payload: {${2:與更新State相關的值} }",
+		"//1. type為用來描述如何更新State、使用哪種情況",
+		"//2. payload為視情況需要多傳入一個payload屬性，",
+		"//   裡面可以放一些與更新State相關的值"
+	],
+	"description": "action物件"
+},
+```
